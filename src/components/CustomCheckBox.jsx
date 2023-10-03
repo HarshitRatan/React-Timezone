@@ -22,7 +22,7 @@ const CustomCheckBox = ({ value, date }) => {
     <FormGroup style={{ float: "left" }}>
       <FormControlLabel
         control={<Checkbox checked={checkedStatus} />}
-        label={value}
+        label={moment(value, "hh:mm a").format("hh:mm a")}
       />
     </FormGroup>
   );
