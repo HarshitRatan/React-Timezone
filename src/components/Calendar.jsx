@@ -50,11 +50,15 @@ const Calendar = ({ checkBoxTimeArray, dateValue }) => {
           hyphens: "auto",
         }}
       >
-        <Box style={{ width: "100%" }}>
-          {checkBoxTimeArray?.map((value, index) => (
-            <CustomCheckBox key={index} value={value} date={dateValue} />
-          ))}
-        </Box>
+        {dateValue?.getDate() >= new Date().getDate() ? (
+          <Box style={{ width: "100%" }}>
+            {checkBoxTimeArray?.map((value, index) => (
+              <CustomCheckBox key={index} value={value} date={dateValue} />
+            ))}
+          </Box>
+        ) : (
+          <p>Past</p>
+        )}
       </Grid>
     </Grid>
   );

@@ -29,7 +29,7 @@ const Home = () => {
         handleNextClick={handleNextClick}
       />
       <SelectInput timeZone={timeZone} setTimeZone={setTimeZone} />
-      {calendarArray.length > 0 &&
+      {calendarArray?.length > 0 &&
         calendarArray?.map((value, index) => (
           <Calendar key={index} checkBoxTimeArray={times} dateValue={value} />
         ))}
