@@ -5,6 +5,7 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
 const Header = ({ handlePreviousClick, handleNextClick }) => {
+  const currentDate = new Date().toDateString();
   return (
     <Grid container spacing={2} style={{ marginBottom: 25 }}>
       <Grid
@@ -33,7 +34,9 @@ const Header = ({ handlePreviousClick, handleNextClick }) => {
           alignItems: "center",
         }}
       >
-        <Typography variant="subtitle-1">Time Now</Typography>
+        <Typography variant="subtitle-1" sx={{ fontWeight: 600 }}>
+          {currentDate}
+        </Typography>
       </Grid>
       <Grid
         item

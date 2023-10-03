@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import CustomCheckBox from "./CustomCheckBox";
 
-const Calendar = ({ checkBoxTimeArray }) => {
+const Calendar = ({ checkBoxTimeArray, dateValue }) => {
   return (
     <Grid
       container
@@ -29,10 +29,13 @@ const Calendar = ({ checkBoxTimeArray }) => {
           variant="subtitle-1"
           style={{ color: "#b91313ed", fontWeight: 800 }}
         >
-          Monday
+          {dateValue.toDateString().slice(0, 3)}
         </Typography>
-        <Typography variant="subtitle-1" style={{ fontWeight: 600 }}>
-          02/25
+        <Typography
+          variant="subtitle-2"
+          style={{ fontWeight: 600, fontSize: "0.8rem" }}
+        >
+          {dateValue.toDateString().slice(4, 10)}
         </Typography>
       </Grid>
       <Grid
@@ -49,7 +52,7 @@ const Calendar = ({ checkBoxTimeArray }) => {
       >
         <Box style={{ width: "100%" }}>
           {checkBoxTimeArray?.map((value, index) => (
-            <CustomCheckBox key={index} value={value} />
+            <CustomCheckBox key={index} value={value} date={dateValue} />
           ))}
         </Box>
       </Grid>
