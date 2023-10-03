@@ -15,7 +15,7 @@ const CustomCheckBox = ({ value }) => {
     }
   }, [value]);
   return (
-    <FormGroup>
+    <FormGroup style={{ float: "left" }}>
       <FormControlLabel
         control={<Checkbox checked={checkedStatus} />}
         label={value}

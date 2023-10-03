@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import CustomCheckBox from "./CustomCheckBox";
 
 const Calendar = ({ checkBoxTimeArray }) => {
@@ -42,11 +42,16 @@ const Calendar = ({ checkBoxTimeArray }) => {
           display: "flex",
           justifyContent: "flex-start",
           alignItems: "center",
+          overflowWrap: "break-word",
+          wordWrap: "break-word",
+          hyphens: "auto",
         }}
       >
-        {checkBoxTimeArray?.map((value, index) => (
-          <CustomCheckBox key={index} value={value} />
-        ))}
+        <Box style={{ width: "100%" }}>
+          {checkBoxTimeArray?.map((value, index) => (
+            <CustomCheckBox key={index} value={value} />
+          ))}
+        </Box>
       </Grid>
     </Grid>
   );
