@@ -2,6 +2,8 @@
 
 
 
+# Please edit the file with the name "jsonData.json" present at the path "src/jsonData/jsonData.json" to change the UI checkbox checked status.
+
 # Prerequisite
 
 NodeJS and Create-React-App Installed on Your Local System.
@@ -28,4 +30,3 @@ To install Dependencies.(Mandatory Step)
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
