@@ -29,10 +29,17 @@ const Home = () => {
   };
   const handleNextClick = () => {
     console.log("Next Clicked");
+    const tempWeek = weekNumber + 1;
+    if (tempWeek <= 52) {
+      setWeekNumber(tempWeek);
+    } else {
+      setWeekNumber(1);
+      const tempYear = year + 1;
+      setYear(tempYear);
+    }
   };
 
   React.useLayoutEffect(() => {
-    console.log("WeekNumber or Year Changes");
     var arr = getAllWeekDaysByWeekNumberAndYear(weekNumber, year);
     setCalendarArray(arr);
   }, [weekNumber, year]);

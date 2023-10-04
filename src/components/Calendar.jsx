@@ -3,6 +3,8 @@ import { Grid, Typography, Box } from "@mui/material";
 import CustomCheckBox from "./CustomCheckBox";
 
 const Calendar = ({ checkBoxTimeArray, dateValue }) => {
+  const dateNow = new Date();
+  dateNow.setHours(0, 0, 0, 0);
   return (
     <Grid
       container
@@ -56,9 +58,7 @@ const Calendar = ({ checkBoxTimeArray, dateValue }) => {
           hyphens: "auto",
         }}
       >
-        {dateValue?.getDate() >= new Date().getDate() &&
-        dateValue?.getMonth() >= new Date().getMonth() &&
-        dateValue?.getFullYear() >= new Date().getFullYear() ? (
+        {dateValue >= dateNow ? (
           <Box style={{ width: "100%" }}>
             {checkBoxTimeArray?.map((value, index) => (
               <CustomCheckBox key={index} value={value} date={dateValue} />
