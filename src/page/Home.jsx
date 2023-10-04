@@ -40,8 +40,13 @@ const Home = () => {
   };
 
   React.useLayoutEffect(() => {
-    var arr = getAllWeekDaysByWeekNumberAndYear(weekNumber, year);
-    setCalendarArray(arr);
+    const setDataToCalendarArray = setTimeout(() => {
+      var arr = getAllWeekDaysByWeekNumberAndYear(weekNumber, year);
+      setCalendarArray(arr);
+    });
+    return () => {
+      clearTimeout(setDataToCalendarArray);
+    };
   }, [weekNumber, year]);
 
   return (
