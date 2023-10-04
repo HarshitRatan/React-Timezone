@@ -23,7 +23,7 @@ const CustomCheckBox = ({ value, date, timeZone }) => {
       <FormControlLabel
         control={<Checkbox checked={checkedStatus} />}
         label={
-          timeZone === 0
+          timeZone === 1
           ? moment(value, "hh:mm a").utc().format("hh:mm a")
           :
           moment(value, "hh:mm a").format("hh:mm a")

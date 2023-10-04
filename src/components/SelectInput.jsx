@@ -18,8 +18,8 @@ export default function SelectInput({ timeZone, setTimeZone }) {
         Timezone :
       </Typography>
       <Select value={timeZone} onChange={handleChange}>
-        <MenuItem value={0}>[UTC+00:00]</MenuItem>
-        <MenuItem value={1}>[UTC+05:30] Indian Standard Time (IST)</MenuItem>
+        <MenuItem value={0}>[UTC+05:30] Indian Standard Time (IST)</MenuItem>
+        <MenuItem value={1}>[UTC+00:00]</MenuItem>
       </Select>
     </FormControl>
   );
