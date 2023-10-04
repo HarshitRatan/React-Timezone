@@ -1,4 +1,6 @@
 ### `Click Here For Live Demo : `
+https://react-timezone-project.netlify.app
+
 
 <p>
  Please edit the file with the name "jsonData.json" present at the path "src/jsonData/jsonData.json" to change the UI checkbox checked status.
