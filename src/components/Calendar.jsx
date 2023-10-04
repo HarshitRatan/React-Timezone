@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import CustomCheckBox from "./CustomCheckBox";
 
-const Calendar = ({ checkBoxTimeArray, dateValue }) => {
+const Calendar = ({ checkBoxTimeArray, dateValue, timeZone }) => {
   const dateNow = new Date();
   dateNow.setHours(0, 0, 0, 0);
   return (
@@ -61,7 +61,12 @@ const Calendar = ({ checkBoxTimeArray, dateValue }) => {
         {dateValue >= dateNow ? (
           <Box style={{ width: "100%" }}>
             {checkBoxTimeArray?.map((value, index) => (
-              <CustomCheckBox key={index} value={value} date={dateValue} />
+              <CustomCheckBox
+                key={index}
+                value={value}
+                date={dateValue}
+                timeZone={timeZone}
+              />
             ))}
           </Box>
         ) : (

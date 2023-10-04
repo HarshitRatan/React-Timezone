@@ -58,7 +58,12 @@ const Home = () => {
       <SelectInput timeZone={timeZone} setTimeZone={setTimeZone} />
       {calendarArray?.length > 0 &&
         calendarArray?.map((value, index) => (
-          <Calendar key={index} checkBoxTimeArray={times} dateValue={value} />
+          <Calendar
+            key={index}
+            checkBoxTimeArray={times}
+            dateValue={value}
+            timeZone={timeZone}
+          />
         ))}
     </Container>
   );

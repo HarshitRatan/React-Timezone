@@ -5,7 +5,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Data from "../jsonData/jsonData.json";
 import moment from "moment";
 
-const CustomCheckBox = ({ value, date }) => {
+const CustomCheckBox = ({ value, date, timeZone }) => {
   const [checkedStatus, setCheckBoxStatus] = React.useState(false);
   React.useLayoutEffect(() => {
     var formatedDate = moment(date).format("YYYY-MM-DD").toString();
@@ -22,7 +22,12 @@ const CustomCheckBox = ({ value, date }) => {
     <FormGroup style={{ float: "left" }}>
       <FormControlLabel
         control={<Checkbox checked={checkedStatus} />}
-        label={moment(value, "hh:mm a").format("hh:mm a")}
+        label={
+          timeZone === 0
+          ? moment(value, "hh:mm a").utc().format("hh:mm a")
+          :
+          moment(value, "hh:mm a").format("hh:mm a")
+        }
       />
     </FormGroup>
   );
