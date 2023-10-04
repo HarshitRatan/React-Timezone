@@ -37,6 +37,12 @@ const Calendar = ({ checkBoxTimeArray, dateValue }) => {
         >
           {dateValue.toDateString().slice(4, 10)}
         </Typography>
+        <Typography
+          variant="subtitle-2"
+          style={{ fontWeight: 600, fontSize: "0.8rem", paddingBottom: 10 }}
+        >
+          {dateValue.toDateString().slice(11, 15)}
+        </Typography>
       </Grid>
       <Grid
         item
@@ -50,7 +56,9 @@ const Calendar = ({ checkBoxTimeArray, dateValue }) => {
           hyphens: "auto",
         }}
       >
-        {dateValue?.getDate() >= new Date().getDate() ? (
+        {dateValue?.getDate() >= new Date().getDate() &&
+        dateValue?.getMonth() >= new Date().getMonth() &&
+        dateValue?.getFullYear() >= new Date().getFullYear() ? (
           <Box style={{ width: "100%" }}>
             {checkBoxTimeArray?.map((value, index) => (
               <CustomCheckBox key={index} value={value} date={dateValue} />
