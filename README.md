@@ -6,35 +6,35 @@
 <h4>
 Default Data in "jsonData.json" are as :- 
 </h4>
-<h5>
-[
-  {
-    "Id": 101,
-    "name": "test",
-    "date": "2023-10-04",
-    "time": "22:30"
-  },
-  {
-    "Id": 102,
-    "name": "test 1",
-    "date": "2023-10-05",
-    "time": "19:00"
-  },
-  {
-    "Id": 103,
-    "name": "test 2",
-    "date": "2023-10-05",
-    "time": "23:00"
-  },
-  {
-    "Id": 104,
-    "name": "test 3",
-    "date": "2023-10-06",
-    "time": "16:00"
-  }
-]
-</h5>
 
+<h5>
+[ <br/>
+  { <br/>
+    "Id": 101, <br/>
+    "name": "test", <br/>
+    "date": "2023-10-04", <br/>
+    "time": "22:30" <br/>
+  }, <br/>
+  { <br/>
+    "Id": 102, <br/>
+    "name": "test 1", <br/>
+    "date": "2023-10-05", <br/>
+    "time": "19:00" <br/>
+  }, <br/>
+  { <br/>
+    "Id": 103, <br/>
+    "name": "test 2", <br/>
+    "date": "2023-10-05", <br/>
+    "time": "23:00" <br/>
+  }, <br/>
+  { <br/>
+    "Id": 104, <br/>
+    "name": "test 3", <br/>
+    "date": "2023-10-06", <br/>
+    "time": "16:00" <br/>
+  } <br/>
+] <br/>
+</h5>
 
 # Prerequisite
 
