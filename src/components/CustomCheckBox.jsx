@@ -7,6 +7,9 @@ import moment from "moment";
 
 const CustomCheckBox = ({ value, date, timeZone }) => {
   const [checkedStatus, setCheckBoxStatus] = React.useState(false);
+  const handleChange = () => {
+    setCheckBoxStatus(!checkedStatus);
+  };
   React.useLayoutEffect(() => {
     var formatedDate = moment(date).format("YYYY-MM-DD").toString();
     const tempData = Data.filter(
@@ -21,12 +24,11 @@ const CustomCheckBox = ({ value, date, timeZone }) => {
   return (
     <FormGroup style={{ float: "left" }}>
       <FormControlLabel
-        control={<Checkbox checked={checkedStatus} />}
+        control={<Checkbox checked={checkedStatus} onChange={handleChange} />}
         label={
           timeZone === 1
-          ? moment(value, "hh:mm a").utc().format("hh:mm a")
-          :
-          moment(value, "hh:mm a").format("hh:mm a")
+            ? moment(value, "hh:mm a").utc().format("hh:mm a")
+            : moment(value, "hh:mm a").format("hh:mm a")
         }
       />
     </FormGroup>
